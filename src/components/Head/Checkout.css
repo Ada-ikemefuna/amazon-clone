@@ -17,4 +17,8 @@
 .checkout_left{
     display: flex;
     flex-direction: column;
+    flex: 2;
+}
+.checkout_right{
+    flex: 1;
 }

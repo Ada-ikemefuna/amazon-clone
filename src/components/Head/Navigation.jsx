@@ -1,11 +1,14 @@
 import { Link } from 'react-router-dom';
 import { FaShoppingBasket } from "react-icons/fa";
 import React from 'react';
-//import { useStateValue } from '../StateProvider';
+import StateProvider  from '../StateProvider';
+import { useContext } from 'react';
+
 
 
 const Navigation = () => {
-  // const [{basket}, dispatch] = useStateValue();
+  const { items } = useContext(StateProvider);
+  console.log(items)
   return (
     <div className='header_nav'>
         <div className="nav_item">
@@ -20,7 +23,7 @@ const Navigation = () => {
         <Link to= '/checkout' style={{textDecoration: "none", color: "white"}}>
         <div className="nav_item shop">
           <FaShoppingBasket className="itemBasket"/>
-          <span className="nav_itemline2 nav_basketCount">0</span>
+          <span className="nav_itemline2 nav_basketCount">{items.length}</span>
         </div>
         </Link>
         
