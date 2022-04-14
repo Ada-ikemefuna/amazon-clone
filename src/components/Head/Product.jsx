@@ -1,13 +1,13 @@
-import { FaStar } from 'react-icons/fa';
+//import { FaStar } from 'react-icons/fa';
 import React from 'react';
 import './Product.css';
-import StateProvider  from '../StateProvider';
-import { useContext } from 'react';
+// import StateProvider  from '../StateProvider';
+// import { useContext } from 'react';
 
 
 
 const Product = ({ id, title, price, rating, image}) => {
-    const { addToCart } = useContext(StateProvider);
+    
     
    
   return (
@@ -18,19 +18,19 @@ const Product = ({ id, title, price, rating, image}) => {
                         <small>$</small>
                         <strong>{price}</strong>
                     </p>
-                    <div className="product_rating">
+                    {/* <div className="product_rating">
                         {Array(rating)
                         .fill()
                         .map((_, i) => (
                             <p><FaStar style={{color: "yellow"}}/></p>
                         ))
                         }
-                        </div>
+                        </div> */}
                 </div>
 
                     <img src={image} alt="img" />
                
-                    <button onClick={() => addToCart(title, price, rating, image)}>
+                    <button>
                     Add To Basket</button>
                   
             </div>

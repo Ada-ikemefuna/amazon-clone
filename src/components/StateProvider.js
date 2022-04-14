@@ -5,8 +5,8 @@ export function StateProvider({children}) {
     const [items, setItems] = useState([])
     console.log(items)
 
-    const addToCart = (title, price, rating, image) =>{
-        setItems((prevItems) => [...prevItems, title, price, rating, image ])
+    const addToCart = () =>{
+        setItems()
     }
 
     return(
